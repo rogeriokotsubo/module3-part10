@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#" lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo SVG</title>
+  <meta property="og:title" content="Exemplo SVG" />
+  <meta property="og:description" content="Utilização da tag canvas HTML5" />
+  <meta property="og:url" content="https://rogeriokotsubo.github.io/module3-part10/" />
+  <meta property="og:image" content="./assets/img/img-photopea.svg" />
+</head>
+<body>
+    <h1>Utilizando Canvas</h1>
+    <br/><br/>
+    <h4>Exercício 1</h4>
+    <br/>
+    <canvas id="canvas" width="630" height="360" style="border:1px solid black;"></canvas>
+
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      ctx.strokeStyle = 'gray';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(70, 300);
+      ctx.lineTo(600, 300);
+      ctx.moveTo(70, 260);
+      ctx.lineTo(600, 260);
+      ctx.moveTo(70, 220);
+      ctx.lineTo(600, 220);
+      ctx.moveTo(70, 180);
+      ctx.lineTo(600, 180);
+      ctx.moveTo(70, 140);
+      ctx.lineTo(600, 140);
+      ctx.moveTo(70, 100);
+      ctx.lineTo(600, 100);
+      ctx.moveTo(70, 60);
+      ctx.lineTo(600, 60);     
+      ctx.stroke();
+
+      ctx.strokeStyle = 'green';
+      ctx.fillStyle = 'green';
+      ctx.fillRect(106,105,40,195);
+      ctx.fillRect(212,124,40,176);
+      ctx.fillRect(328,292,40,8);
+      ctx.fillRect(444,292,40,8);
+      ctx.fillRect(560,292,40,8);
+
+      ctx.fillStyle = 'gray';
+      ctx.font = '18px arial';   
+      ctx.fillText('Turma Turing - Distribuição dos Aspirantes por Região', 100 , 30 )
+      ctx.font = '12px arial';   
+      ctx.fillText('0 %', 30 , 305 )
+      ctx.fillText('10 %', 30 , 265 )
+      ctx.fillText('20 %', 30 , 225 )
+      ctx.fillText('30 %', 30 , 185 )
+      ctx.fillText('40 %', 30 , 145 )
+      ctx.fillText('50 %', 30 , 105 )
+      ctx.fillText('60 %', 30 , 65 )
+
+      ctx.fillText('Nordeste', 102 , 320 )
+      ctx.fillText('Sudeste', 208 , 320 )
+      ctx.fillText('Centro Oeste', 314 , 320 )
+      ctx.fillText('Norte', 450 , 320 )
+      ctx.fillText('Sul', 570 , 320 )
+
+    </script>
+</body>
+</html>
